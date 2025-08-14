@@ -1,6 +1,9 @@
 import express from 'express'
 const app = express();
 
+//importa o arquivo de rotas
+import routes from "../routes/route.js"
+
 app.use(express.urlencoded({extended:true}))
 app.set('view engine', 'ejs')
 
@@ -14,9 +17,9 @@ const __dirname = dirname(__filename);
 app.use(express.static(__dirname + '../public'))
 app.set ('views',join(__dirname, '../views'));
 
-//importa o arquivo de rotas
-import routes from "../routes/route.js"
 
 app.use(routes)
 
 app.listen(3001)
+
+export default app
