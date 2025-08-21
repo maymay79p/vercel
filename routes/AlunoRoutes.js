@@ -3,9 +3,9 @@ const router = express.Router();
 import AlunoController from '../controllers/AlunoController.js';
 const controle = new AlunoController();
 
-const caminhonete = 'aluno/'
+const caminhobase = 'aluno/'
 
-router.get('/'+ caminhonete + 'add',controle.openAdd)
-router.get('/'+ caminhonete + 'add',controle.add)
-router.get('/'+ caminhonete + 'add',controle.list)
+router.get('/'+ caminhobase + 'add',controle.openAdd)
+router.post('/'+ caminhobase + 'add',controle.add)
+router.get('/'+ caminhobase + 'lst',controle.list)
 export default router 
