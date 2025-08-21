@@ -1,0 +1,18 @@
+<%-include(../cabeçalho.ejs)%>
+    <h1>Alunos</h1>
+    <table>
+        <tr>
+            <td>Nome>
+            <td>Matrícula
+            <td>Ações</td>
+        </tr>
+        <%for (const {nome, matricula} of alunos){%>
+        <!--aqui vamos fazer o for-->
+        <%Alunos.forEach(function(aluno))%>
+        <tr>
+            <td><%=aluno.nome%></td>
+            <td><%=aluno.matricula%><td>
+            <td></td>
+        </tr>
+        <%}%>
+    </table>
