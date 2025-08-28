@@ -1,12 +1,13 @@
 <%-include('../cabecalho.ejs')%>
     <h1>Alunos</h1>
+    <a href="/aluno/add">Listar</a>
     <table>
         <tr>
             <td>Nome</td>
-            <td>Matrícula</td>
-            <td>Ações</td>
+            <td>Matricula</td>
+            <td>Açoes</td>
         </tr>
-        <%for (const {nome, matricula} of Alunos){%>
+        <%for (const {nome, matricula } of Alunos){%>
         <tr>
             <td><%=nome%></td>
             <td><%=matricula%><td>
